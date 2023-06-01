@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find My Jam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico.png" type=" image/png" >
+  <link href="style-global.css" rel="stylesheet" type="text/css">
+  <body>
+    <nav class="navbar fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="FMJ.png" alt="Bootstrap" width="80" height="65">
+          </a>
+          
+          <nav class="d-flex justify-content-end ">
+            <div class="container-fluid ">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active hover-bg" aria-current="page" href="index.html">首頁</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link hover-bg" href="news.html">最新消息</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link hover-bg" href="recommend.html">本週推薦</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link hover-bg" href="global.html">全球排行</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link hover-bg" href="quest.html">常見問題</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+                 
+        </div>
+      </nav>
+
+      <img src="album pic/SZA-2.jpg" class="img-fluid w-100" alt="...">
+      <h2 class="position-absolute top-50 start-50 translate-middle fs-1 fw-bolder"
+                    style="color: #ffffff;" class="fs-2 fw-normal">全球排行</h2>
+    
+    <div style="background-color: #000000; height: 200px; color: rgb(255, 255, 255);">
+        <h1 class="text-center" style="font-size: 25px; align-items: center;">每週更新全球播放最多的歌曲</h1>
+    </div>
+
+    
+
+    <div class="text-center" style="background-color: #000000; height: 2100px; width: 100%; color: rgb(255, 255, 255); padding-top: 150px;">
+    
+      <style>
+        .centered-image {
+          transition: border-radius 0.3s ease; /* 添加邊框半徑的過渡效果，持續時間為0.3秒，速度曲線為ease */
+        }
+      
+        .centered-image.round {
+          border-radius: 50%; /* 設置圖片的邊框半徑為50% */
+        }
+      </style>
+      
+      <script>
+        // 在頁面載入完畢後執行程式碼
+        window.addEventListener('DOMContentLoaded', function() {
+          // 獲取所有帶有 "centered-image" 類別的圖片元素
+          var images = document.querySelectorAll('.centered-image');
+      
+          // 監聽鼠標滑過事件
+          images.forEach(function(image) {
+            image.addEventListener('mouseover', function() {
+              // 滑過時將圖片的類別切換為 "round"，以觸發圖片變成圓形的過渡效果
+              this.classList.add('round');
+            });
+      
+            // 監聽鼠標離開事件
+            image.addEventListener('mouseout', function() {
+              // 離開時將圖片的類別移除，使其邊框半徑恢復成初始狀態
+              this.classList.remove('round');
+            });
+          });
+        });
+      </script>
+
+        <style>
+          .list-group-item {
+              opacity: 0;
+              transform: translateY(50px);
+              transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+          }
+      
+          .list-group-item.appear {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      </style>
+<script>
+  function isElementInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
+
+  function handleScrollAnimation() {
+      var items = document.querySelectorAll('.list-group-item');
+
+      items.forEach(function(item) {
+          if (isElementInViewport(item)) {
+              item.classList.add('appear');
+          }
+      });
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+</script>
+    
+<ul class="list-group list-group-flush mx-auto" style="background-color: #000000; max-width: 700px; padding-top: 20px;">
+  <li class="list-group-item appear text-white" style="font-size: 35px; font-weight: bold; padding-left: 270px; padding-bottom: 30px;">2023年3月10日</li>
+
+  <li class="list-group-item text-white" style="font-size: 20px;">
+    <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+      <span class="counting" style="margin-right: 10px; font-size: 100px; font-weight: bold;">1</span>
+                    <img src="album pic/normani.jpeg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">Fair</div>
+                        <div style="white-space: pre-line;">NORMANI</div>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="list-group-item text-white" style="font-size: 20px;">
+              <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                <span class="counting2" style="margin-right: 10px; font-size: 100px; font-weight: bold;">2</span>
+                    <img src="album pic/ARIANA.jpeg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">Die For You</div>
+                        <div style="white-space: pre-line;">The Weeknd</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+              <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                <span class="counting3" style="margin-right: 10px; font-size: 100px; font-weight: bold;">3</span>
+                    <img src="album pic/Luke.jpeg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">Fast Car</div>
+                        <div style="white-space: pre-line;">Luke Combs</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+                <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                    <span style="margin-right: 0px; font-size: 100px; font-weight: bold;">4</span>
+                    <img src="album pic/Bad-Bunny.jpg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">MIA</div>
+                        <div style="white-space: pre-line;">Bad Bunny</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+                <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                    <span style="margin-right: 5px; font-size: 100px; font-weight: bold;">5</span>
+                    <img src="album pic/NF.jpg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">HOPE</div>
+                        <div style="white-space: pre-line;">NF</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+                <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                    <span style="margin-right: 5px; font-size: 100px; font-weight: bold;">6</span>
+                    <img src="album pic/MC-2.jpeg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">Jaded</div>
+                        <div style="white-space: pre-line;">Miley Cyrus</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+                <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                    <span style="margin-right: 14px; font-size: 100px; font-weight: bold;">7</span>
+                    <img src="album pic/SZA.jpg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">Kill Bill</div>
+                        <div style="white-space: pre-line;">SZA</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+                <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                    <span style="margin-right: 8px; font-size: 100px; font-weight: bold;">8</span>
+                    <img src="album pic/CHILD.jpg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                    <div>
+                        <div style="margin-bottom: 5px; font-weight: bold;">Antidote</div>
+                        <div style="white-space: pre-line;">Chiiild</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item text-white" style="font-size: 20px;">
+              <div style="display: flex; align-items: flex-end; vertical-align: bottom;">
+                <span style="margin-right: 10px; font-size: 100px; font-weight: bold;">9</span>
+                <img src="album pic/MANANA.jpeg" style="width: 100px; height: 100px; margin-right: 15px; margin-left: 60px;" alt="圖片1" class="centered-image">
+                <div>
+                  <div style="margin-bottom: 5px; font-weight: bold;">Mañana Será Bonito</div>
+                  <div style="white-space: pre-line;">KAROL G</div>
+                </div>
+              </div>
+            </li>
+          </ul>     
+          <style>
+            @keyframes counting {
+              from {
+                transform: scale(1);
+              }
+              to {
+                transform: scale(1.3);
+              }
+            }
+          
+            .counting {
+              animation: counting 0.5s alternate infinite;
+              color: #F3F315;
+            }
+            .counting2 {
+              animation: counting 0.5s alternate infinite;
+              color: #FF6600;
+            }
+            .counting3 {
+              animation: counting 0.5s alternate infinite;
+              color: #6E0DD0;
+            }
+          </style>
+            
+    </div>
+
+    <div class="empty-block-2"></div>
+
+    <div class="container" style="background-color: #ffffff; height: 100px; width: 100%;">
+      <div class="row fw-bold" style="color: #919191;">
+        <div class="col-md-2">
+          <p class="bottom">關於我們</p>
+          <p class="bottom">最新消息</p>
+          <p class="bottom">常見問題</p>
+        </div>
+        <div class="col-md-2">
+          <p class="bottom">YOUTUBE</p>
+          <p class="bottom">FACEBOOK</p>
+          <p class="bottom">INSTAGRAM</p>
+        </div>
+        <div>
+          <div>
+            <img src="FMJ-logo B.png" class="wiggle-image" style="float: right; margin-top: -5.5rem; margin-right: -2rem; transform: scale(0.8);">
+            <style>
+              .wiggle-image {
+                animation: wiggle 1s ease-in-out infinite; /* 設定 wiggle 動畫 */
+                transform-origin: center center; /* 設定旋轉的中心點 */
+              }
+            
+              @keyframes wiggle {
+                0%, 100% {
+                  transform: rotate(0deg); /* 起始和結束時的旋轉角度 */
+                }
+                25% {
+                  transform: rotate(-10deg); /* 25% 時的旋轉角度 */
+                }
+                75% {
+                  transform: rotate(10deg); /* 75% 時的旋轉角度 */
+                }
+              }
+            </style>
+            
+            
+          </div>        </div>
+      </div>
+    </div>
+    
+    <style>
+      .bottom:hover {
+        color: #FF6600; /* 更改滑過時的文字顏色 */
+        cursor: pointer; /* 添加指標樣式 */
+      }
+
+      .body {
+      overflow-x: hidden;
+    }
+    </style>
+    <div class="empty-block-2"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
